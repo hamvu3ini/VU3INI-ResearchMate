@@ -1,0 +1,8 @@
+# Abstract
+Urban heat islands raise night-time temperatures in dense city districts. Tree canopy cover reduces surface temperature substantially.
+
+# Results
+Neighbourhoods with more than 30% tree canopy cover were on average 2.4 degrees cooler than neighbourhoods with less than 10% canopy. The cooling effect of tree canopy cover was strongest during summer afternoons. Satellite thermal imaging confirmed the temperature differences across 48 city neighbourhoods.
+
+# Discussion
+Planting street trees is a cost-effective strategy for mitigating urban heat islands in tropical and temperate cities alike.

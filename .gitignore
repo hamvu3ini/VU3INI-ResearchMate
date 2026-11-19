@@ -1,0 +1,10 @@
+.venv/
+dist/
+data/
+runtime/
+vendor/
+__pycache__/
+.pytest_cache/
+*.pyc
+.use-bundled-python
+backend/vale_styles/

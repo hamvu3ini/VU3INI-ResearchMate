@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VU3INI ResearchMate</title>
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script>
+    try { const t = localStorage.getItem("rm-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <img id="brand-logo" class="brand-logo" src="/assets/logo.png" alt="VU3INI logo"
+           onerror="this.onerror=null;this.src='/assets/logo-fallback.svg'">
+      <div class="brand-text">
+        <span class="brand-name" id="brand-name">VU3INI ResearchMate</span>
+        <span class="badge" id="version-badge">v{{VERSION}}</span>
+      </div>
+    </div>
+    <div class="project-picker">
+      <select id="project-select" aria-label="Project"></select>
+      <button class="btn ghost sm" id="new-project-btn" title="New paper">＋ New paper</button>
+    </div>
+    <div class="header-right">
+      <span class="pill" id="net-pill" title="Internet status">● Checking…</span>
+      <div class="hw-wrap">
+        <button class="pill hw-pill" id="hw-pill" aria-haspopup="true" aria-expanded="false" title="Compute mode">
+          <span id="hw-label">Auto</span>
+          <span class="tele" id="hw-tele"></span>
+        </button>
+        <div class="hw-menu" id="hw-menu" hidden>
+          <h4>Compute mode</h4>
+          <div id="hw-modes"></div>
+          <div class="hw-model">
+            <label>Model size (GB) <input type="number" id="hw-size" step="0.1" min="0.5"></label>
+            <label>Layers <input type="number" id="hw-layers" min="1"></label>
+          </div>
+          <div class="hw-slider" id="hw-slider-wrap">
+            <label>GPU layers (Hybrid) <output id="hw-ngl-out">auto</output></label>
+            <input type="range" id="hw-ngl" min="0" max="32" value="16">
+            <button class="btn ghost sm" id="hw-ngl-auto">Auto-calc</button>
+          </div>
+          <p class="hw-reason" id="hw-reason"></p>
+          <ul class="hw-warn" id="hw-warn"></ul>
+          <button class="btn sm" id="hw-reprobe">Re-profile hardware</button>
+        </div>
+      </div>
+      <button class="icon-btn" id="theme-btn" title="Toggle light / dark theme" aria-label="Toggle theme">◐</button>
+      <button class="icon-btn" id="help-btn" title="Help / About" aria-label="Help and About">?</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="steps" id="steps" aria-label="21-step workflow"></nav>
+    <main class="panel" id="panel">
+      <div class="empty">Loading…</div>
+    </main>
+  </div>
+
+  <footer class="credit" id="credit">{{FOOTER}}</footer>
+
+  <dialog id="about-dialog" class="dialog">
+    <div class="dialog-head">
+      <img src="/assets/logo.png" alt="" class="about-logo" onerror="this.onerror=null;this.src='/assets/logo-fallback.svg'">
+      <div>
+        <h2>VU3INI ResearchMate <span class="badge">v{{VERSION}}</span></h2>
+        <p>Created by <strong>Sasanka Boruah - VU3INI</strong> · <a href="mailto:hamvu3ini@gmail.com">hamvu3ini@gmail.com</a></p>
+      </div>
+      <button class="icon-btn" id="about-close" aria-label="Close">✕</button>
+    </div>
+    <div id="about-body" class="dialog-body"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

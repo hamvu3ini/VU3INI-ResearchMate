@@ -1,0 +1,20 @@
+{
+  "rtx5060_8gb": {"os": "Windows 11", "cpu_model": "AMD Ryzen 7 7700", "physical_cores": 8, "logical_cores": 16,
+    "ram_total_gb": 32, "ram_available_gb": 24, "avx2": true, "avx512": true,
+    "gpus": [{"index": 0, "name": "NVIDIA GeForce RTX 5060", "vendor": "NVIDIA", "backend": "cuda",
+              "vram_total_gb": 8.0, "vram_free_gb": 7.4, "integrated": false}]},
+  "low_vram_4gb": {"os": "Windows 10", "cpu_model": "Intel Core i5-10400", "physical_cores": 6, "logical_cores": 12,
+    "ram_total_gb": 16, "ram_available_gb": 11, "avx2": true, "avx512": false,
+    "gpus": [{"index": 0, "name": "NVIDIA GeForce GTX 1650", "vendor": "NVIDIA", "backend": "cuda",
+              "vram_total_gb": 4.0, "vram_free_gb": 3.6, "integrated": false}]},
+  "dual_mismatched": {"os": "Windows 11", "cpu_model": "Intel Xeon E5-2680 v4", "physical_cores": 14, "logical_cores": 28,
+    "ram_total_gb": 64, "ram_available_gb": 50, "avx2": true, "avx512": false,
+    "gpus": [{"index": 0, "name": "NVIDIA GeForce RTX 3060", "vendor": "NVIDIA", "backend": "cuda",
+              "vram_total_gb": 12.0, "vram_free_gb": 11.2, "integrated": false},
+             {"index": 1, "name": "NVIDIA GeForce GTX 1660", "vendor": "NVIDIA", "backend": "cuda",
+              "vram_total_gb": 6.0, "vram_free_gb": 5.5, "integrated": false}]},
+  "integrated_only": {"os": "Windows 11", "cpu_model": "Intel Core i7-8700", "physical_cores": 6, "logical_cores": 12,
+    "ram_total_gb": 16, "ram_available_gb": 10, "avx2": true, "avx512": false,
+    "gpus": [{"index": 0, "name": "Intel(R) UHD Graphics 630", "vendor": "Intel", "backend": "directml",
+              "vram_total_gb": 1.0, "vram_free_gb": 1.0, "integrated": true}]}
+}

@@ -1,0 +1,9 @@
+# Optional ML extras — vendored by build_installer.bat unless --skip-ml, installed best-effort by install_offline.bat.
+# Enables neural perplexity in Turnitout-Humanizer and dense GPU/CPU embeddings in PaperQA2 grounding.
+# torch is fetched from the CUDA 12.8 index (RTX 50-series / 40 / 30 series); it also runs on CPU-only PCs.
+# The local LLM itself runs in Ollama or llama.cpp (vendored as binaries), not as a Python wheel.
+torch>=2.7
+transformers>=4.44
+sentence-transformers>=3.0
+onnxruntime-directml>=1.18 ; platform_system == "Windows"
+paper-qa>=5.0
